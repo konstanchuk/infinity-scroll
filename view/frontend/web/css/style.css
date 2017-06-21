@@ -1,0 +1,27 @@
+/**
+ * Infinity Scroll Extension for Magento 2
+ *
+ * @author     Volodymyr Konstanchuk http://konstanchuk.com
+ * @copyright  Copyright (c) 2017 The authors
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+.toolbar .infinity-scroll-products {
+    display: inline-block;
+}
+
+body .toolbar .infinity-scroll-products a.infinity-scroll-btn,
+body .toolbar .infinity-scroll-products .infinity-scroll-loading-icon {
+    display: none;
+}
+
+.products.wrapper, .products.wrapper > ol {
+    display: inline;
+}
+
+body .toolbar .infinity-scroll-products .infinity-scroll-loading-icon {
+    width: 77px;
+    height: 77px;
+    background-image: url(../images/loading.gif);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * Infinity Scroll Extension for Magento 2
+ *
+ * @author     Volodymyr Konstanchuk http://konstanchuk.com
+ * @copyright  Copyright (c) 2017 The authors
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+
+use Magento\Catalog\Model\Product\ProductList\Toolbar;
+
+/** @var $block \Konstanchuk\InfinityScroll\Block\Init */
+
+?>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "konstanchuk/infinityScroll": {
+                "loading_type": <?php echo json_encode($block->getHelper()->getLoadingType()); ?>,
+                "page_param_name": <?php echo json_encode(Toolbar::PAGE_PARM_NAME); ?>
+            }
+        }
+    }
+</script>

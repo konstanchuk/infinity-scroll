@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Infinity Scroll Extension for Magento 2
+ *
+ * @author     Volodymyr Konstanchuk http://konstanchuk.com
+ * @copyright  Copyright (c) 2017 The authors
+ * @license    http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Konstanchuk_InfinityScroll::css/style.css" />
+    </head>
+    <body>
+        <referenceBlock name="product_list_toolbar">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Konstanchuk_InfinityScroll::product/list/toolbar.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="content">
+            <block class="Konstanchuk\InfinityScroll\Block\Init"
+                   name="konstanchuk_infinity_scroll_init"
+                   template="Konstanchuk_InfinityScroll::init.phtml" />
+        </referenceBlock>
+    </body>
+</page>
